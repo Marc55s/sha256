@@ -32,7 +32,7 @@
 
             # Define a build routine (if applicable)
             defaultPackage.${system} = pkgs.stdenv.mkDerivation {
-                pname = "regex";
+                pname = "sha256";
                 version = "1.0.0";
 
                 src = self;  # Use the current directory for your source code
@@ -64,14 +64,14 @@
                     '';
                 installPhase = ''
                 mkdir -p $out/bin
-                cp regex $out/bin/
+                cp sha256 $out/bin/
                 '';
             };
 
             # Define a run routine (if applicable)
             defaultApp.${system} = {
                 type = "app";
-                program = "${self.defaultPackage.${system}}/bin/regex";
+                program = "${self.defaultPackage.${system}}/bin/sha256";
             };
         };
 }
