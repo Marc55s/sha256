@@ -59,7 +59,6 @@
 
                 buildPhase = ''
                     echo "Building..."
-                    cmake .
                     make
                     '';
                 installPhase = ''
