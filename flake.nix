@@ -14,8 +14,6 @@
                     pkgs.clang-tools     # LSP support (includes clangd)
                     pkgs.glibc.dev
                     pkgs.glibc
-                    pkgs.cmake           # Build system
-                    pkgs.bear           # Build system
                     pkgs.gnumake         # Make tool
                     pkgs.pkg-config      # Dependency management
                     pkgs.libclang        # Required for some LSP features
@@ -51,7 +49,6 @@
                     pkgs.clang-tools     # LSP support (includes clangd)
                     pkgs.glibc.dev
                     pkgs.glibc
-                    pkgs.cmake           # Build system
                     pkgs.gnumake         # Make tool
                     pkgs.pkg-config      # Dependency management
                     pkgs.libclang        # Required for some LSP features
@@ -59,7 +56,7 @@
 
                 buildPhase = ''
                     echo "Building..."
-                    make
+                        make
                     '';
                 installPhase = ''
                 mkdir -p $out/bin

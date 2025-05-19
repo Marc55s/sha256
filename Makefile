@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -lm
 
 # Output executable
-OUT = sha-256-impl.exe
+OUT = sha256
 
 # Source files
 SRC = $(wildcard *.c)  # All C files in the current directory (src)
